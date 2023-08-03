@@ -17,30 +17,30 @@ letters.forEach(() => console.log("Un elemento."));
 
 console.log("=======================")
 
-const letters = ["a", "b", "c", "d"];
+const letters2 = ["a", "b", "c", "d"];
 
-letters.forEach((element) => console.log(element));
+letters2.forEach((element) => console.log(element));
 // Devuelve 'a' / 'b' / 'c' / 'd'
 
-letters.forEach((element, index) => console.log(element, index));
+letters2.forEach((element, index) => console.log(element, index));
 // Devuelve 'a' 0 / 'b' 1 / 'c' 2 / 'd' 3
 
-letters.forEach((element, index, array) => console.log(array[0]));
+letters2.forEach((element, index, array) => console.log(array[0]));
 // Devuelve 'a' / 'a' / 'a' / 'a'
 
 console.log("=======================")
 
-const letters = ["a", "b", "c", "d"];
-letters.every((letter) => letter.length === 1); // true
+const letters3 = ["a", "b", "c", "d"];
+letters3.every((letter) => letter.length === 1); // true
 
 console.log("=======================")
 
-const letters = ["a", "b", "c", "d"];
+const letters4 = ["a", "b", "c", "d"];
 
 // Esta función se ejecuta por cada elemento del array
 const condition = function (letter) {
     // Si el tamaño del elemento (string) es igual a 1
-    if (letter.length == 1) {
+    if (letters4.length == 1) {
         return true;
     }
     else {
@@ -49,12 +49,12 @@ const condition = function (letter) {
 };
 
 // Si todos los elementos devuelven true, devuelve true
-letters.every(condition);   // true
+letters4.every(condition);   // true
 
 console.log("=======================")
 
-const letters = ["a", "bb", "c", "d"];
-letters.some((element) => element.length == 2);   // true
+const letters5 = ["a", "bb", "c", "d"];
+letters5.some((element) => element.length == 2);   // true
 
 console.log("=======================")
 
@@ -65,8 +65,8 @@ nameSizes; // Devuelve [3, 5, 5, 9, 9]
 
 console.log("=======================")
 
-const names = ["Ana", "Pablo", "Pedro", "Pancracio", "Heriberto"];
-const filteredNames = names.filter((name) => name.startsWith("P"));
+const names2 = ["Ana", "Pablo", "Pedro", "Pancracio", "Heriberto"];
+const filteredNames = names2.filter((name2) => name2.startsWith("P"));
 
 filteredNames; // Devuelve ['Pablo', 'Pedro', 'Pancracio']
 
@@ -83,26 +83,30 @@ values.flat(Infinity);
 
 console.log("=======================")
 
-const values = [10, 15, 20, [25, 30], 35, [40, 45, [50, 55], 60]];
+const values2 = [10, 15, 20, [25, 30], 35, [40, 45, [50, 55], 60]];
 
-values.flatMap(element => Array.isArray(element) ? element.length : 1);
+values2.flatMap(element => Array.isArray(element) ? element.length : 1);
 // [1, 1, 1, 2, 1, 4]
 
 console.log("=======================")
 
-const names = ["Ana", "Pablo", "Pedro", "Pancracio", "Heriberto"];
+const names3 = ["Ana", "Pablo", "Pedro", "Pancracio", "Heriberto"];
 
-names.find((name) => name.length == 5);       // 'Pablo'
-names.findIndex((name) => name.length == 5);  // 1
+names3.find((name3) => name3.length == 5);       // 'Pablo'
+names3.findIndex((name3) => name3.length == 5);  // 1
+
+/*
+
+console.log("=======================")
+
+const names4 = ["Ana", "Pablo", "Pedro", "Pancracio", "Heriberto"];
+
+names4.findLast((name4) => name4.length == 5);       // 'Pedro'
+names4.findLastIndex((name4) => name4.length == 5);  // 2
 
 console.log("=======================")
 
-const names = ["Ana", "Pablo", "Pedro", "Pancracio", "Heriberto"];
-
-names.findLast((name) => name.length == 5);       // 'Pedro'
-names.findLastIndex((name) => name.length == 5);  // 2
-
-console.log("=======================")
+*/
 
 const numbers = [95, 5, 25, 10, 25];
 numbers.reduce((first, second) => {
@@ -119,18 +123,18 @@ numbers.reduce((first, second) => {
 
 console.log("=======================")
 
-const numbers = [95, 5, 25, 10, 25];
+const numbers2 = [95, 5, 25, 10, 25];
 
-numbers.reduce((first, second) => first - second);
+numbers2.reduce((first, second) => first - second);
 // 95 - 5 - 25 - 10 - 25. Devuelve 30
 
-numbers.reduceRight((first, second) => first - second);
+numbers2.reduceRight((first, second) => first - second);
 // 25 - 10 - 25 - 5 - 95. Devuelve -110
 
 //parametro inicial
 
-const numbers = [95, 5, 25, 10, 25];
-numbers.reduce((accumulator, nextElement) => {
+const numbers3 = [95, 5, 25, 10, 25];
+numbers3.reduce((accumulator, nextElement) => {
     console.log(`F=${accumulator} S=${nextElement}`);
     return accumulator + nextElement;
 }, 0);
@@ -144,3 +148,4 @@ numbers.reduce((accumulator, nextElement) => {
 // Finalmente, devuelve 160
 
 console.log("=======================")
+
